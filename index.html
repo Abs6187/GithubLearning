@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Image Resizer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <grid-container>
+    <div id="title-div">
+      <h1>Image Resizer</h1>
+    </div>
+    <div id="background-image" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg'); background-size: cover;">
+    </div>
+
+    
+    
+    <div id="select-image-div">
+      <div id="drag-area">
+        <img  src="upload_icon.svg">
+        <p>Drag and drop image here</p>
+        <p>or</p>    
+        <button id="select-image">
+          <span id="btn-icon"> 
+            <i class="fa fa-upload"></i>
+          </span>
+          <input type="file" id="photo-file-input"> Browse from Computer
+        </button>
+      </div>
+    </div>
+
+
+    <div id="image-div">
+      <div id="canvas-div">
+        <canvas id="resized-canvas"></canvas>
+      </div>
+      <div id="file-name"></div>
+    </div>
+
+    <div id="empty-div">
+      <button id="select-another-image">
+        <input type="file" id="photo-file-input" > Select Another Image? ↑
+      </button>
+     
+    </div>
+
+
+
+    <div id="sliders-div">
+      <input type="range" min="1" max="100" value="100" id="slider-size" class="slider">
+      <label id="slider-value-label"> 100% of original size</label>
+      <input type="range" min="1" max="10" value="8" id="slider-quality" class="slider">
+      <label id="slider-quality-label">Quality: 8</label>
+    </div>
+    
+    <div id="download-div">
+      <button id="download-button">
+        <span id="btn-icon"> 
+          <i class="fa fa-download"></i>
+        </span>
+        Download Image 
+      </button>
+    </div>
+
+    <footer id="footer">
+      <h3>Developed by <a href="https://github.com/Abs6187" target="_blank">Abhay Gupta</a></h3>
+    </footer>
+  </grid-container>
+<script src="index.js"></script>
+</body>
+</html>
